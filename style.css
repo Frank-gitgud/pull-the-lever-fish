@@ -3,8 +3,8 @@ body {
     min-height: 100vh;
     background: #45d9d0;
 }
-//Our game screen has the same proportions as the reference image: 946 × 2048//
-//make .game the reference point for that absolute layer of the background//
+/*Our game screen has the same proportions as the reference image: 946 × 2048*/
+/*make .game the reference point for that absolute layer of the background*/
 .game {
     height: 100vh;
     aspect-ratio: 946 / 2048;
@@ -12,13 +12,13 @@ body {
     background: #45d9d0;
     position: relative; 
 }
-//make background actually fill the game screen//
+/*make background actually fill the game screen*/
 .background {
     position: absolute;
     inset: 0;
     background: #45d9d0;
 }
-//chamber appearance//
+/*chamber appearance*/
 .chamber {
     position: absolute;
     left: 12%;
