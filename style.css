@@ -3,6 +3,7 @@ body {
     min-height: 100vh;
     background: #45d9d0;
 }
+//Our game screen has the same proportions as the reference image: 946 × 2048//
 .game {
     height: 100vh;
     aspect-ratio: 946 / 2048;
