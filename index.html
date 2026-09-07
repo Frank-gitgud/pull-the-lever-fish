@@ -2,29 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
     <meta
         name="viewport"
         content="width=device-width,
-                 initial-scale=1.0,
-                 maximum-scale=1.0,
-                 user-scalable=no">
-    <title>Pin Rescue - Level 1</title>
+        initial-scale=1.0,
+        maximum-scale=1.0,
+        user-scalable=no"
+    >
+
+    <title>Pull the Lever Fish - Level 1</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
     <main class="game-container">
+
         <canvas
             id="gameCanvas"
             width="430"
             height="780">
         </canvas>
-        <div id="message">
-            Pull the pin to release the water.
+
+        <div class="controls">
+            <button
+                id="resetButton"
+                type="button">
+                ↻ Reset Level
+            </button>
         </div>
-        <button id="resetButton">
-            ↻ Reset Level
-        </button>
+
     </main>
+
     <script src="game.js"></script>
+
 </body>
 </html>
