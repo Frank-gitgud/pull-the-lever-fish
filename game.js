@@ -1,74 +1,48 @@
 "use strict";
-
 const canvas =
     document.getElementById("gameCanvas");
-
 const ctx =
     canvas.getContext("2d");
-
 const message =
     document.getElementById("message");
-
 const resetButton =
     document.getElementById("resetButton");
-
-
 const WIDTH = 430;
 const HEIGHT = 780;
-
-
 // -----------------------------
 // GAME STATE
 // -----------------------------
-
 let game = {
     pinPulled: false,
-
     waterParticles: [],
-
     time: 0,
-
     levelComplete: false,
-
     fish: {
         x: 215,
         y: 680
     }
 };
-
-
 // -----------------------------
 // RESET
 // -----------------------------
-
 function resetGame() {
-
     game = {
         pinPulled: false,
-
         waterParticles: [],
-
         time: 0,
-
         levelComplete: false,
-
         fish: {
             x: 215,
             y: 680
         }
     };
-
     message.textContent =
         "Pull the pin to release the water.";
-
     draw();
 }
-
-
 // -----------------------------
 // ROUNDED RECTANGLE
 // -----------------------------
-
 function roundedRect(
     x,
     y,
@@ -79,14 +53,11 @@ function roundedRect(
     stroke,
     lineWidth = 1
 ) {
-
     ctx.beginPath();
-
     ctx.moveTo(
         x + radius,
         y
     );
-
     ctx.arcTo(
         x + width,
         y,
@@ -94,7 +65,6 @@ function roundedRect(
         y + height,
         radius
     );
-
     ctx.arcTo(
         x + width,
         y + height,
@@ -110,7 +80,6 @@ function roundedRect(
         y,
         radius
     );
-
     ctx.arcTo(
         x,
         y,
@@ -118,35 +87,21 @@ function roundedRect(
         y,
         radius
     );
-
     ctx.closePath();
-
-
     if (fill) {
-
         ctx.fillStyle = fill;
-
         ctx.fill();
     }
-
-
     if (stroke) {
-
         ctx.lineWidth = lineWidth;
-
         ctx.strokeStyle = stroke;
-
         ctx.stroke();
     }
 }
-
-
 // -----------------------------
 // BACKGROUND
 // -----------------------------
-
 function drawBackground() {
-
     const gradient =
         ctx.createLinearGradient(
             0,
@@ -154,86 +109,59 @@ function drawBackground() {
             0,
             HEIGHT
         );
-
-
     gradient.addColorStop(
         0,
         "#16d5e5"
     );
-
     gradient.addColorStop(
         1,
         "#58e2ed"
     );
-
-
     ctx.fillStyle = gradient;
-
     ctx.fillRect(
         0,
         0,
         WIDTH,
         HEIGHT
     );
-
-
     // Background curves
-
     ctx.strokeStyle =
         "rgba(0,120,150,0.12)";
-
     ctx.lineWidth = 2;
-
-
     for (
         let i = -1;
         i < 7;
         i++
     ) {
-
         ctx.beginPath();
-
         ctx.moveTo(
             30 + i * 78,
             100
         );
-
         ctx.bezierCurveTo(
             -20 + i * 78,
             300,
-
             95 + i * 78,
             420,
 
             25 + i * 78,
             720
         );
-
         ctx.stroke();
     }
-
-
     // Bubbles
-
     for (
         let i = 0;
         i < 22;
         i++
     ) {
-
         const x =
             (i * 79) % 410 + 10;
-
         const y =
             130 + ((i * 137) % 590);
-
-
         ctx.fillStyle =
             "rgba(255,255,255,0.13)";
-
-
         ctx.beginPath();
-
         ctx.arc(
             x,
             y,
@@ -241,22 +169,15 @@ function drawBackground() {
             0,
             Math.PI * 2
         );
-
         ctx.fill();
     }
 }
-
-
 // -----------------------------
 // TOP UI
 // -----------------------------
-
 function drawHeader() {
-
     // Gear
-
     ctx.beginPath();
-
     ctx.arc(
         58,
         70,
@@ -264,38 +185,23 @@ function drawHeader() {
         0,
         Math.PI * 2
     );
-
     ctx.fillStyle =
         "rgba(255,255,255,0.05)";
-
     ctx.fill();
-
     ctx.lineWidth = 5;
-
     ctx.strokeStyle = "white";
-
     ctx.stroke();
-
-
     ctx.fillStyle = "white";
-
     ctx.font = "31px Arial";
-
     ctx.textAlign = "center";
-
     ctx.textBaseline = "middle";
-
     ctx.fillText(
         "⚙",
         58,
         70
     );
-
-
     // Tool button
-
     ctx.beginPath();
-
     ctx.arc(
         151,
         70,
@@ -324,10 +230,7 @@ function drawHeader() {
         151,
         70
     );
-
-
     // Level
-
     roundedRect(
         168,
         35,
@@ -336,13 +239,9 @@ function drawHeader() {
         15,
         "#69c80b"
     );
-
-
     ctx.fillStyle = "white";
-
     ctx.font =
         "900 31px Arial";
-
     ctx.fillText(
         "LEVEL 1",
         253,
@@ -1411,4 +1310,3 @@ resetGame();
 
 gameLoop();
 
-})();
