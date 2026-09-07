@@ -3,3 +3,9 @@ body {
     min-height: 100vh;
     background: #45d9d0;
 }
+.game {
+    height: 100vh;
+    aspect-ratio: 946 / 2048;
+    margin: 0 auto;
+    background: #45d9d0;
+}
