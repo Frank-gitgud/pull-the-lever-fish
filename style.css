@@ -10,3 +10,9 @@ body {
     margin: 0 auto;
     background: #45d9d0;
 }
+//make background actually fill the game screen//
+.background {
+    position: absolute;
+    inset: 0;
+    background: #45d9d0;
+}
