@@ -4,12 +4,13 @@ body {
     background: #45d9d0;
 }
 //Our game screen has the same proportions as the reference image: 946 × 2048//
+//make .game the reference point for that absolute layer of the background//
 .game {
     height: 100vh;
     aspect-ratio: 946 / 2048;
     margin: 0 auto;
     background: #45d9d0;
-    position: relative; //make .game the reference point for that absolute layer of the background//
+    position: relative; 
 }
 //make background actually fill the game screen//
 .background {
