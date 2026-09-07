@@ -17,3 +17,12 @@ body {
     inset: 0;
     background: #45d9d0;
 }
+//chamber appearance//
+.chamber {
+    position: absolute;
+    left: 12%;
+    top: 13%;
+    width: 76%;
+    height: 70%;
+    background: #172f46;
+}
