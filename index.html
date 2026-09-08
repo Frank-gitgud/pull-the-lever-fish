@@ -9,10 +9,31 @@
 </head>
 
 <body>
-    <main class="game">
-        <div class="background"></div>
-        <div class="chamber"></div>
-    </main>
+   <main class="game">
+    <div class="background"></div>
+<!--Let's fix the chamber's shape. SVG is our precision drawing tool for complex static shapes-->
+    <svg class="chamber" viewBox="0 0 946 2048" preserveAspectRatio="none">
+        <path
+            d="M 300 0
+               L 646 0
+               L 646 550
+               Q 646 575 625 595
+               L 590 630
+               Q 575 645 575 675
+               L 575 1370
+               Q 575 1435 473 1460
+               Q 371 1435 371 1370
+               L 371 675
+               Q 371 645 356 630
+               L 321 595
+               Q 300 575 300 550
+               Z"
+            fill="#172f46"
+            stroke="#0b1822"
+            stroke-width="4"
+        />
+    </svg>
+</main>
 
     <script src="game.js"></script>
 </body>
