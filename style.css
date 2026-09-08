@@ -5,12 +5,13 @@ body {
 }
 /*Our game screen has the same proportions as the reference image: 946 × 2048*/
 /*make .game the reference point for that absolute layer of the background*/
+/*explicitly constrain the game to that portrait ratio*/
 .game {
-    height: 100vh;
-    aspect-ratio: 946 / 2048;
+    position: relative;
+    width: min(100vw, calc(100vh * 946 / 2048));
+    height: min(100vh, calc(100vw * 2048 / 946));
     margin: 0 auto;
     background: transparent;
-    position: relative; 
 }
 /*make background actually fill the game screen*/
 .background {
