@@ -14,27 +14,31 @@
 <!--Let's fix the chamber's shape. SVG is our precision drawing tool for complex static shapes-->
 <!-- The lower chamber should open outward slightly as it approaches the bottom, rather than staying the same narrow tube all the way down.-->
     <svg class="chamber" viewBox="0 0 946 2048" preserveAspectRatio="none">
-        <path
-    d="M 300 0
-       L 646 0
-       L 646 550
-       Q 646 575 625 595
-       L 575 645
-       Q 560 660 560 690
-       L 575 1430
-       Q 577 1480 550 1515
-       Q 520 1555 473 1565
-       Q 426 1555 396 1515
-       Q 369 1480 371 1430
-       L 386 690
-       Q 386 660 371 645
-       L 321 595
-       Q 300 575 300 550
-       Z"
+       <path
+    d="
+        M 300 0
+        L 646 0
+        L 646 550
+
+        Q 646 575 625 595
+        L 575 645
+        Q 560 660 560 690
+
+        L 590 1400
+        C 590 1490 540 1545 473 1560
+        C 406 1545 356 1490 356 1400
+
+        L 386 690
+        Q 386 660 371 645
+        L 321 595
+        Q 300 575 300 550
+
+        Z
+    "
     fill="#172f46"
     stroke="#0b1822"
     stroke-width="4"
-            />
+           />
     </svg>
 </main>
 
