@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pull the Lever Fish</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+   <main class="game">
+    <div class="background"></div>
+<!--Let's fix the chamber's shape. SVG is our precision drawing tool for complex static shapes-->
+<!-- The lower chamber should open outward slightly as it approaches the bottom, rather than staying the same narrow tube all the way down.-->
+    <svg class="chamber" viewBox="0 0 946 2048" preserveAspectRatio="none">
+       <path
+    d="
+        M 300 0
+        L 646 0
+        L 646 550
+
+        Q 646 575 625 595
+        L 575 645
+        Q 560 660 560 690
+
+        L 590 1390
+
+        C 590 1425 575 1450 550 1468
+        C 530 1482 503 1490 473 1492
+        C 443 1490 416 1482 396 1468
+        C 371 1450 356 1425 356 1390
+
+        L 386 690
+
+        Q 386 660 371 645
+        L 321 595
+        Q 300 575 300 550
+
+        Z
+    "
+    fill="#172f46"
+    stroke="#0b1822"
+    stroke-width="4"
+           />
+    </svg>
+</main>
+
+    <script src="game.js"></script>
+</body>
+</html>
